@@ -38,6 +38,7 @@ Partial Class Form1
         Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -55,6 +56,7 @@ Partial Class Form1
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.UIHelp = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -74,6 +76,7 @@ Partial Class Form1
         Me.Button1.Size = New System.Drawing.Size(171, 21)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "&Apply"
+        Me.UIHelp.SetToolTip(Me.Button1, "Apply new refresh rate")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -127,6 +130,7 @@ Partial Class Form1
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(324, 23)
         Me.ProgressBar1.TabIndex = 1
+        Me.UIHelp.SetToolTip(Me.ProgressBar1, "it display free of RAM")
         '
         'GroupBox2
         '
@@ -179,6 +183,7 @@ Partial Class Form1
         Me.ProgressBar2.Name = "ProgressBar2"
         Me.ProgressBar2.Size = New System.Drawing.Size(324, 23)
         Me.ProgressBar2.TabIndex = 1
+        Me.UIHelp.SetToolTip(Me.ProgressBar2, "It display free of Virtual")
         '
         'TabControl1
         '
@@ -195,6 +200,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.CheckBox1)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.Button1)
@@ -210,6 +216,17 @@ Partial Class Form1
         Me.TabPage1.Text = "Memory"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(110, 357)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(125, 17)
+        Me.CheckBox2.TabIndex = 13
+        Me.CheckBox2.Text = "&Real Time Monitoring"
+        Me.UIHelp.SetToolTip(Me.CheckBox2, "Provide realtime monitor")
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -218,6 +235,7 @@ Partial Class Form1
         Me.CheckBox1.Size = New System.Drawing.Size(98, 17)
         Me.CheckBox1.TabIndex = 12
         Me.CheckBox1.Text = "Always &On Top"
+        Me.UIHelp.SetToolTip(Me.CheckBox1, "Omamori Memory remains in front of all other windows unless minimized")
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -231,7 +249,7 @@ Partial Class Form1
         Me.GroupBox3.Size = New System.Drawing.Size(336, 78)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Overall"
+        Me.GroupBox3.Text = "Conclusion"
         '
         'Label11
         '
@@ -276,6 +294,7 @@ Partial Class Form1
         Me.ComboBox1.Size = New System.Drawing.Size(159, 21)
         Me.ComboBox1.TabIndex = 9
         Me.ComboBox1.Text = "100"
+        Me.UIHelp.SetToolTip(Me.ComboBox1, "How many millisecond Omamori Memory to update")
         '
         'TabPage2
         '
@@ -455,5 +474,7 @@ Partial Class Form1
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents UIHelp As System.Windows.Forms.ToolTip
 
 End Class

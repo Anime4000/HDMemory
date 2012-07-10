@@ -80,4 +80,16 @@ Public Class Form1
             Me.TopMost = False
         End If
     End Sub
+
+    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox2.CheckState = 1 Then
+            ComboBox1.Enabled = False
+            Button1.Enabled = False
+            Timer1.Interval = 1
+        ElseIf CheckBox2.CheckState = 0 Then
+            ComboBox1.Enabled = True
+            Button1.Enabled = True
+            Timer1.Interval = ComboBox1.Text
+        End If
+    End Sub
 End Class
